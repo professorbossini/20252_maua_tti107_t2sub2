@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms</title>
+</head>
+<body>
+
+  <form>
+    <fieldset>
+      <legend>Escolha um veículo</legend>
+      <input type="checkbox" name="veiculo"><label>Corsa</label>
+      <input type="checkbox" name="veiculo"><label>Fusca</label>
+    </fieldset>
+    <input type="radio" name="sexo"><label>M</label>
+    <input type="radio" name="sexo"><label>F</label>
+
+
+
+    <label for="estado">Estado:</label>
+    <select name="estado" id="estado">
+      <option value="1">São Paulo</option>
+      <option value="2">Rio de Janeiro</option>
+      <option value="3">Minas Gerais</option>
+      <option value="4">Espírito Santo</option>
+    </select>
+    <!-- estado=1 -->
+
+    <label>
+      Primeiro nome
+      <input type="text">
+    </label>
+    <!-- <label for="primeiroNome">Primeiro nome:</label>
+    <input id="primeiroNome" type="text"> -->
+    <label for="sobrenome">Sobrenome:</label>
+    <input id="sobrenome" type="text">
+    <label id="email" for="Email:"></label>
+    <input type="email" id="email">
+    <label for="cor">Cor preferida:</label>
+    <input type="color" id="id">
+    <input type="file">
+    <input type="submit" value="Enviar">
+  </form>
+  
+</body>
+</html>
