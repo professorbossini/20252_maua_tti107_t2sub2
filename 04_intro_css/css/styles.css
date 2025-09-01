@@ -4,14 +4,18 @@
   text-align: center;
 }
 
+p.promocao.outra {
+  text-align: center;
+  background-color: lightgreen;
+}
+p{
+
+}
+
 p#descricao {
   color: blue;  
 }
 
-p.promocao {
-  text-align: center;
-  background-color: lightgreen;
-}
 
 .nova{
   color: white;
@@ -23,6 +27,28 @@ p.final-pagina#rodape{
   background-color: lightgray;
   text-align: center;
 }
+
+.curso , .novo-curso{
+  background-color: aliceblue;
+}
+
+.novo-curso{
+  color: red;
+}
+
+.curso, .novo-curso, #contato{
+  padding: 12px;
+  border: 1px solid lightgray;
+}
+
+/* .curso{
+  background-color: aliceblue;
+}
+
+.novo-curso{
+  background-color: aliceblue;
+  color: red;
+} */
 
 
 /* h1 {

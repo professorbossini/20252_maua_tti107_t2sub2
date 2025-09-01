@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Efeito cascata e especificidade de seletores</title>
+  <link rel="stylesheet" href="css/cascata_especificidade.css">
+  <style>
+
+    body.classe1#id1{
+
+    }
+
+    span div div{
+
+    }
+
+    .classe1.classe2#id1#id2, body div div article .classe1{
+
+    }
+
+    /* main, article{
+      border: 1px solid black;
+    } */
+    /* .principal article{
+      background-color: lightblue;
+    }
+    main article{
+      background-color: beige;
+    } */
+    /* #titulo{
+      color: blue;
+    }
+
+    .descricao{
+      color: green;
+    }
+
+    p{
+      color: red;
+    } */
+  </style>
+</head>
+<body>
+ <main class="principal">
+    <article>
+      <p id="titulo" class="descricao">
+        Algoritmo de especificidade do CSS
+      </p>
+    </article>
+ </main>
+</body>
+</html>

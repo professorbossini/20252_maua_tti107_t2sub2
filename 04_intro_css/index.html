@@ -2,23 +2,59 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* seletores descendentes */
+    article  p{
+      padding: 12px;
+      background-color: lightgray;
+    }
+
+    article > p{
+      border: 2px solid black;
+        
+    }
+
+    #principal p.promocao{
+      padding: 12px;
+      background-color: aliceblue;
+    }
+    body #principal article section p .coordenadores{
+      text-align: center;
+    }
+  </style>
   <title>Document</title>
 </head>
 <body>
-  <!-- isso é um comentário HTML -->
-  <h1 id="titulo">Portal de cursos</h1>
-  <p id="descricao">Temos cursos nas mais diversas áreas.</p>
-  <p class="promocao nova">
-    Venha conversar conosco e conhecer nossas ofertas de 
-    <strong bolsas de estudos</strong>.
-  </p>
-  <p
-    class="final-pagina">
-    Entre em contato: 1122334555
-  </p>
-  <p id="rodape" class="final-pagina">
-    &copy; Todos os direitos reservados
-  </p>
+  <main id="principal">
+    <!-- isso é um comentário HTML -->
+    <h1 id="titulo">Portal de cursos</h1>
+    <p id="descricao">Temos cursos nas mais diversas áreas.</p>
+    <p class="promocao nova">
+      Venha conversar conosco e conhecer nossas ofertas de 
+      <strong> bolsas de estudos</strong>.
+    </p>
+  
+    <p>Cursos:</p>
+    <article>
+      <p class="novo-curso">Ciência da Computação</p>
+      <p class="curso">Engenharia de Computação</p>
+      <p class="curso">Farmácia</p>
+      <section>
+        <p class="coordenadores">
+          Saiba que nossos coordenadores estão à disposição!
+        </p>
+      </section>
+    </article>
+  
+  
+    <p
+      id="contato"
+      class="final-pagina">
+      Entre em contato: 1122334555
+    </p>
+    <p id="rodape" class="final-pagina">
+      &copy; Todos os direitos reservados
+    </p>
+  </main>
 </body>
 </html>
