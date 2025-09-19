@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leiautes fixos e fluidos</title>
+  <style>
+    html body{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      margin: 0;
+    }
+    /* leiaute fixo */
+    main {
+      border: solid 1px black;
+      /* width: 1280px; */
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .engenharia, .farmacia, .matematica{
+      /* display: inline-block; */
+      display: block;
+      border: solid 1px blue;
+      padding: 12px;  
+      /* width: 20%; */
+      height: 50px;
+    }
+    /* media query */
+    @media(min-width: 550px){
+      .engenharia, .farmacia, .matematica{
+        background-color: aliceblue !important;
+      }  
+    }
+    @media(min-width: 900px){
+      .engenharia, .farmacia, .matematica{
+        display: inline-block;
+        width: 20%;
+        background-color: aqua !important;
+      }
+    }
+    </style>
+</head>
+<body>
+  <main>
+    <article class="engenharia">
+      Engenharia
+    </article>
+    <article class="farmacia">
+      Farmácia
+    </article>
+    <article class="matematica">
+      Matemática
+    </article>
+  </main>
+</body>
+</html>
