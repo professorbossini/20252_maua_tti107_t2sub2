@@ -26,20 +26,31 @@ async function cadastrarFilme(){
   const sinopseInput = document.querySelector('#sinopseInput')
   const titulo = tituloInput.value
   const sinopse = sinopseInput.value
-  // const filme = {titulo: titulo, sinopse: sinopse}
-  const filme = {titulo, sinopse}
-  tituloInput.value = ''
-  sinopseInput.value = ''
-  const filmes = (await axios.post(url, filme)).data
-  const tabela = document.querySelector('.filmes')
-  const corpoDaTabela = tabela.getElementsByTagName('tbody')[0]
-  corpoDaTabela.innerHTML = ""
-  for(let filme of filmes){
-    const linha = corpoDaTabela.insertRow(0)
-    const celulaTitulo = linha.insertCell(0)
-    const celulaSinopse = linha.insertCell(1)
-    celulaTitulo.innerHTML = filme.titulo
-    celulaSinopse.innerHTML = filme.sinopse
+  if(titulo && sinopse){
+    // const filme = {titulo: titulo, sinopse: sinopse}
+    const filme = {titulo, sinopse}
+    tituloInput.value = ''
+    sinopseInput.value = ''
+    const filmes = (await axios.post(url, filme)).data
+    const tabela = document.querySelector('.filmes')
+    const corpoDaTabela = tabela.getElementsByTagName('tbody')[0]
+    corpoDaTabela.innerHTML = ""
+    for(let filme of filmes){
+      const linha = corpoDaTabela.insertRow(0)
+      const celulaTitulo = linha.insertCell(0)
+      const celulaSinopse = linha.insertCell(1)
+      celulaTitulo.innerHTML = filme.titulo
+      celulaSinopse.innerHTML = filme.sinopse
+    }
+  }
+  else{
+    const alert = document.querySelector('.alert')
+    alert.classList.add('show')
+    alert.classList.remove('d-none')
+    setTimeout(() => {
+      alert.classList.remove('show')
+      alert.classList.add('d-none')  
+    }, 2000)
   }
 }
 
