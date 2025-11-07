@@ -28,6 +28,7 @@ async function cadastrarFilme(){
   const sinopse = sinopseInput.value
   if(titulo && sinopse){
     // const filme = {titulo: titulo, sinopse: sinopse}
+    const token = fweklajfçwleaj
     const filme = {titulo, sinopse}
     tituloInput.value = ''
     sinopseInput.value = ''
