@@ -1,7 +1,28 @@
 const protocolo = 'http://'
 const baseURL = 'localhost:3000'
-const filmesEndpoint = '/filmes'
+
+async function cadastrarUsuario(){
+  const usuarioCadastroInput = document.querySelector('#usuarioCadastroInput')
+  const passwordCadastroInput = document.querySelector('#passwordCadastroInput')
+  const usuarioCadastro = usuarioCadastroInput.value
+  const passwordCadastro = passwordCadastroInput.value
+  if(usuarioCadastro && passwordCadastro){
+
+  }
+  else{
+    const alert = document.querySelector('.alert-modal-cadastro')
+    alert.innerHTML = "Preencha todos os campos"
+    alert.classList.add('show', 'alert-danger')
+    alert.classList.remove('d-none')
+    setTimeout(() => {
+      alert.classList.remove('show')
+      alert.classList.add('d-none')
+    }, 2000)
+  }
+}
+
 async function obterFilmes(){
+  const filmesEndpoint = '/filmes'
   // operador de interpolação
   //http://localhost:3000
   const url = `${protocolo}${baseURL}${filmesEndpoint}`
@@ -16,11 +37,10 @@ async function obterFilmes(){
     celulaTitulo.innerHTML = filme.titulo
     celulaSinopse.innerHTML = filme.sinopse
   }
-
-
 }
 
 async function cadastrarFilme(){
+  const filmesEndpoint = '/filmes'
   const url = `${protocolo}${baseURL}${filmesEndpoint}`
   const tituloInput = document.querySelector('#tituloInput')
   const sinopseInput = document.querySelector('#sinopseInput')
